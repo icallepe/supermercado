@@ -90,6 +90,7 @@ namespace Tiendita_de_Armando
         {
             Console.WriteLine("a");
             Console.ReadLine();
+            Environment.Exit(1);
         }
     }
 }
