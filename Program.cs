@@ -52,36 +52,44 @@ namespace Tiendita_de_Armando
         }
        static void Search()
         {
-
+            Console.WriteLine("a");
+            Console.ReadLine();
         }
         static void Summ()
         {
-
+            Console.WriteLine("a");
+            Console.ReadLine();
         }
         static void Pay()
         {
-
+            Console.WriteLine("a");
+            Console.ReadLine();
         }
         static void Consultar()
         {
-
+            Console.WriteLine("a");
+            Console.ReadLine();
         }
         static void Actualizar()
         {
-
+            Console.WriteLine("a");
+            Console.ReadLine();
         }
         static void Informe()
         {
-
+            Console.WriteLine("a");
+            Console.ReadLine();
         }
 
         static void Deudas()
         {
-
+            Console.WriteLine("a");
+            Console.ReadLine();
         }
         static void Salir()
         {
-
+            Console.WriteLine("a");
+            Console.ReadLine();
         }
     }
 }
