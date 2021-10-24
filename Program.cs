@@ -50,6 +50,38 @@ namespace Tiendita_de_Armando
             }
             MainMenu();
         }
-       
+       static void Search()
+        {
+
+        }
+        static void Summ()
+        {
+
+        }
+        static void Pay()
+        {
+
+        }
+        static void Consultar()
+        {
+
+        }
+        static void Actualizar()
+        {
+
+        }
+        static void Informe()
+        {
+
+        }
+
+        static void Deudas()
+        {
+
+        }
+        static void Salir()
+        {
+
+        }
     }
 }
