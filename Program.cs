@@ -187,7 +187,8 @@ namespace Tiendita
                         break;
 
                     case "8":
-
+                        Console.WriteLine("-- Total saldo --");
+                        clientsManager.GetAllDebts();
                         break;
                     case "9":
                         flag = false;
