@@ -121,6 +121,7 @@ namespace Tiendita
                 Console.WriteLine("Opción 7. Informe de ventas");
                 Console.WriteLine("Opción 8. Cuentas por pagar");
                 Console.WriteLine("Opción 9. Salir");
+                 Console.WriteLine("Opción 10. Credito");
 
                 string myOptions;
                 myOptions = Console.ReadLine();
