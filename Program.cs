@@ -41,8 +41,8 @@ namespace Tiendita
             bool flag = true;
             int total = 0;
 
-            Console.WriteLine("Bienvenido a la tiendita de Armando!");
-            Console.WriteLine("Ingrese el número de la opción deseada");
+            Console.WriteLine("-- Bienvenido a la tiendita de Armando! --\n");
+            Console.WriteLine("Ingrese el número de la opción deseada\n");
 
             while (flag)
             {
@@ -92,7 +92,7 @@ namespace Tiendita
                         break;
                 }
 
-                Console.WriteLine("Operacion finalizada. Por favor seleccione otra opcion o termine el programa:");
+                Console.WriteLine("\nOperacion finalizada. Por favor seleccione otra opcion o termine el programa:\n");
             }
         }
     }
