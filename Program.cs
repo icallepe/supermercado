@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Tiendita
 {
@@ -30,7 +31,7 @@ namespace Tiendita
                 { "Desodorante", 2000 }
             };
         }
-         public int GetValueByProductName(string productName)
+        public int GetValueByProductName(string productName)
         {
             return Products.GetValueOrDefault(productName);
         }
@@ -78,7 +79,18 @@ namespace Tiendita
 
                         break;
                     case "2":
-                        
+                        Console.WriteLine("Ingrese el nombre del producto");
+                        string productName = Console.ReadLine();
+                        int productValue = storage.GetValueByProductName(productName);
+
+                        if (productValue == 0)
+                        {
+                            Console.WriteLine($"{productName} no existe");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"{productName} tiene un precio de: {productValue}");
+                        }
                         break;
                     case "3":
                         
