@@ -41,10 +41,6 @@ namespace Tiendita_de_Armando
                         }
                         break;
                     case "2":
-<<<<<<< HEAD
-                    Summ();
-                    break;
-=======
                         Console.WriteLine("Ingrese el nombre del producto");
                         string nameP = Console.ReadLine();
                         for (int n = 0; n < productos.Length; n++)
@@ -55,7 +51,7 @@ namespace Tiendita_de_Armando
                             }
                         }
                         break;
->>>>>>> ac6d53e3042615da4f2a8dfa723103f48620c88f
+                        
                     case "3":
                         Console.WriteLine("Ingrese los productos que va a llevar");
                         string nameQ = Console.ReadLine();
@@ -71,8 +67,18 @@ namespace Tiendita_de_Armando
                         break;
 
                     case "4":
-                    Consultar();
-                    break;
+                     Console.WriteLine("La cantidad a pagar es: " + valorCompra);
+                        Console.WriteLine("A la cuenta de quién el cobro?");
+                        string nameR = Console.ReadLine();
+                        for (int n = 0; n < clientes.Length; n++)
+                        {
+                            if (clientes[n].Equals(nameR))
+                            {
+                                Console.WriteLine("añadido a la cuenta de: " + nameR);
+                                deudaJuan += valorCompra;
+                            }
+                        }
+                        break;
                 case "5":
                     Actualizar();
                     break;
