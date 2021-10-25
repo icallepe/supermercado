@@ -201,7 +201,7 @@ namespace Tiendita
                         flag = false;
                         break;
                     default:
-                        Console.WriteLine("El número ingresado no se encuentra dentro de las opciones");
+                        Console.WriteLine("El número que ingresa no esta dentro de las opciones correspondientes");
                         break;
                 }
 
