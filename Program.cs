@@ -76,6 +76,7 @@ namespace Tiendita
                 { "Ambientador", 9000 },
                 { "Cerveza", 4000 },
                 { "Desodorante", 2000 }
+                { "Mantequilla", 4000 }
             };
         }
         public int GetValueByProductName(string productName)
