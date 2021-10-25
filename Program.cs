@@ -38,7 +38,6 @@ namespace Tiendita
             }
         }
 
-
         public void GetDebtByName(string clientName)
         {
             if (Clients.ContainsKey(clientName)) // Si el cliente existe
@@ -48,14 +47,6 @@ namespace Tiendita
             else
             {
                 Console.WriteLine($"El cliente {clientName} no existe.");
-            }
-        }
-
-        public void GetAllDebts()
-        {
-            foreach (var client in Clients)
-            {
-                Console.WriteLine($"- {client.Key}: {client.Value}");
             }
         }
 
@@ -170,6 +161,14 @@ namespace Tiendita
                             string productSold = $"- {products[n]}: {value}";
                             sellRecords.Add(productSold);
                             Console.WriteLine(productSold);
+                        }
+                        if (total == 0)
+                        {
+                            Console.WriteLine("Los productos que ingreso no existen o no ingreso ningun producto. Intente de nuevo.");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"Valor total a pagar por los productos: {total}");
                         }
                         break;
                     case "4":
