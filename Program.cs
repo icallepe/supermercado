@@ -142,7 +142,7 @@ namespace Tiendita
 
                         if (productValue == 0)
                         {
-                            Console.WriteLine($"{productName} no existe");
+                            Console.WriteLine($"{productName} no esta disponible");
                         }
                         else
                         {
