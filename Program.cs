@@ -38,6 +38,7 @@ namespace Tiendita
             }
         }
 
+
         public void GetDebtByName(string clientName)
         {
             if (Clients.ContainsKey(clientName)) // Si el cliente existe
@@ -47,6 +48,14 @@ namespace Tiendita
             else
             {
                 Console.WriteLine($"El cliente {clientName} no existe.");
+            }
+        }
+
+        public void GetAllDebts()
+        {
+            foreach (var client in Clients)
+            {
+                Console.WriteLine($"- {client.Key}: {client.Value}");
             }
         }
 
