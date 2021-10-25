@@ -27,14 +27,20 @@ namespace Tiendita_de_Armando
             Console.WriteLine("Opción 7. Cuentas por pagar");
             Console.WriteLine("Opción 8. Salir");
 
-            string myOptions;
-            myOptions = Console.ReadLine();
-                switch (myOptions)
+            while (flag)
             {
-                case "1":
-                    Search();
-                    break;
-                case "2":
+                string myOptions;
+                myOptions = Console.ReadLine();
+                switch (myOptions)
+                {
+                    case "1":
+                        Console.WriteLine("Catálogo de precios");
+                        for (int i = 0; i < productos.Length; i++)
+                        {
+                            Console.WriteLine(productos[i] + " " + precios[i]);
+                        }
+                        break;
+                    case "2":
                     Summ();
                     break;
                 case "3":
