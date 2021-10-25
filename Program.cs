@@ -6,6 +6,14 @@ namespace Tiendita_de_Armando
     {
         static void MainMenu()
         {
+            string[] productos = { "Leche", "Pan", "Huevo", "Gaseosa", "Cafe", "Miel", "Aceite", "Jabon", "Galleta", "Cereal", "Avena", "Clorox", "Ambientador", "Cerveza", "Desodorante" };
+            int[] precios = { 2000, 2500, 200, 4500, 2200, 6000, 3000, 8000, 2000, 800, 7500, 5000, 9000, 6500, 1800, 3500 };
+            bool flag = true;
+            int valorCompra = 0;
+            string[] clientes = { "Juan", "Pedro", "Ana", "Martha", "Manuela", "Miguel", };
+            int deudaJuan = 0;
+
+
             Console.Clear();
             Console.WriteLine("Bienvenido a la tiendita de Armando!");
             Console.WriteLine("");
