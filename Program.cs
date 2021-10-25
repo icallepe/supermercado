@@ -47,6 +47,7 @@ namespace Tiendita
         public static void Main()
         {
             Storage storage = new Storage();
+            List<string> sellRecords = new List<string>();
             bool flag = true;
             int total = 0;
 
@@ -100,6 +101,9 @@ namespace Tiendita
                         {
                             int value = storage.GetValueByProductName(products[n]);
                             total += value;
+                            string productSold = $"- {products[n]}: {value}";
+                            sellRecords.Add(productSold);
+                            Console.WriteLine(productSold);
                         }
                         break;
                     case "4":
