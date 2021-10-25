@@ -4,6 +4,53 @@ using System.Linq;
 
 namespace Tiendita
 {
+    public class ClientsManager
+    {
+        public Dictionary<string, int> Clients { get; set; }
+
+        public ClientsManager()
+        {
+            // Nombre - Deuda
+            Clients = new Dictionary<string, int>(StringComparer.InvariantCultureIgnoreCase) // Llave por minuscula o mayuscula
+            {
+                { "Juan", 0 },
+                { "Pedro", 0 },
+                { "Ana", 0 },
+                { "Martha", 0 },
+                { "Manuela", 0 },
+                { "Miguel", 0 }
+            };
+        }
+
+        public void AddDebtByName(string clientName, int debt, bool forceUpdate = false)
+        {
+            if (Clients.ContainsKey(clientName)) // Si el cliente existe
+            {
+                int currentValue = Clients.GetValueOrDefault(clientName);
+                currentValue += debt;
+                var valueToAdd = forceUpdate ? debt : currentValue;
+                Clients[clientName] = valueToAdd;
+                Console.WriteLine($"{clientName} tiene una deuda/saldo actual de: {valueToAdd}");
+            }
+            else
+            {
+                Console.WriteLine($"El cliente {clientName} no existe.");
+            }
+        }
+
+        public void GetDebtByName(string clientName)
+        {
+            if (Clients.ContainsKey(clientName)) // Si el cliente existe
+            {
+                Console.WriteLine($"{clientName} tiene una deuda de: {Clients.GetValueOrDefault(clientName)}");
+            }
+            else
+            {
+                Console.WriteLine($"El cliente {clientName} no existe.");
+            }
+        }
+
+    }
    
 
     public class Storage
@@ -47,6 +94,7 @@ namespace Tiendita
         public static void Main()
         {
             Storage storage = new Storage();
+            ClientsManager clientsManager = new ClientsManager();
             List<string> sellRecords = new List<string>();
             bool flag = true;
             int total = 0;
@@ -107,7 +155,11 @@ namespace Tiendita
                         }
                         break;
                     case "4":
-
+                        Console.WriteLine($"La cantidad a pagar es: {total}");
+                        Console.WriteLine("A la cuenta de quién el cobro?");
+                        string clientName = Console.ReadLine();
+                        clientsManager.AddDebtByName(clientName, -total);
+                        total = 0;
                         break;
                     case "5":
                         
