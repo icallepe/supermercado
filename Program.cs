@@ -30,6 +30,15 @@ namespace Tiendita
                 { "Desodorante", 2000 }
             };
         }
+         public int GetValueByProductName(string productName)
+        {
+            return Products.GetValueOrDefault(productName);
+        }
+
+        public KeyValuePair<string, int> GetProductAtIndex(int index)
+        {
+            return Products.ElementAt(index);
+        }
     }
 
     public class Program
