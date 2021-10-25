@@ -169,7 +169,14 @@ namespace Tiendita
                         break;
 
                     case "6":
-                   
+                        Console.Write("Ingrese el nombre de cliente a actualizar: ");
+                        string currentClientName = Console.ReadLine();
+                        Console.Write("Ingrese el saldo a actualizar: ");
+                        string currentDebt = Console.ReadLine();
+                        Console.Write("Descontar de deuda? si/no: ");
+                        string forceUpdate = Console.ReadLine().ToLower();
+                        bool isForceUpdate = !string.IsNullOrEmpty(forceUpdate) && forceUpdate == "no";
+                        clientsManager.AddDebtByName(currentClientName, int.Parse(currentDebt), isForceUpdate);
                         break;
                     case "7":
                         
