@@ -93,7 +93,14 @@ namespace Tiendita
                         }
                         break;
                     case "3":
-                        
+                        Console.WriteLine("Ingrese los productos que va a llevar separados por un espacio");
+                        string[] products = Console.ReadLine().Split(" ");
+
+                        for (int n = 0; n < products.Length; n++)
+                        {
+                            int value = storage.GetValueByProductName(products[n]);
+                            total += value;
+                        }
                         break;
                     case "4":
 
