@@ -161,9 +161,13 @@ namespace Tiendita
                         clientsManager.AddDebtByName(clientName, -total);
                         total = 0;
                         break;
+
                     case "5":
-                        
+                        Console.Write($"Ingrese el nombre del cliente: ");
+                        string currentClient = Console.ReadLine();
+                        clientsManager.GetDebtByName(currentClient);
                         break;
+
                     case "6":
                    
                         break;
