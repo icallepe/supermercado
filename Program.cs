@@ -50,6 +50,14 @@ namespace Tiendita
             }
         }
 
+        public void GetAllDebts()
+        {
+            foreach (var client in Clients)
+            {
+                Console.WriteLine($"- {client.Key}: {client.Value}");
+            }
+        }
+
     }
    
 
@@ -210,18 +218,15 @@ namespace Tiendita
                     case "9":
                         flag = false;
                         break;
-
+                    default:
+                        Console.WriteLine("El número que ingresa no esta dentro de las opciones correspondientes");
+                        break;
                     case "10":
                         Console.WriteLine("Hecho por:");
                         Console.WriteLine("Miguel Mogollón");
                         Console.WriteLine("Isabela Calle");
                         Console.WriteLine("José David Serna");
                         break;
-                    default:
-                        Console.WriteLine("El número que ingresa no esta dentro de las opciones correspondientes");
-                        break;
-                    
-                    
                 }
 
                 Console.WriteLine("\nOperacion finalizada. Por favor seleccione otra opcion o termine el programa:\n");
