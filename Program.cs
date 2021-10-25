@@ -41,8 +41,16 @@ namespace Tiendita_de_Armando
                         }
                         break;
                     case "2":
-                    Summ();
-                    break;
+                        Console.WriteLine("Ingrese el nombre del producto");
+                        string nameP = Console.ReadLine();
+                        for (int n = 0; n < productos.Length; n++)
+                        {
+                            if (productos[n].Equals(nameP))
+                            {
+                                Console.WriteLine(productos[n] + " tiene un precio de: " + precios[n]);
+                            }
+                        }
+                        break;
                 case "3":
                     Pay();
                     break;
