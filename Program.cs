@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 
-
 namespace Tiendita
 {
    
@@ -61,6 +60,12 @@ namespace Tiendita
                 switch (myOptions)
                 {
                     case "1":
+                    Console.WriteLine("-- Catálogo de precios --");
+                        for (int i = 0; i < storage.Products.Count; i++)
+                        {
+                            var product = storage.GetProductAtIndex(i);
+                            Console.WriteLine($"{product.Key}: {product.Value}");
+                        }
 
                         break;
                     case "2":
