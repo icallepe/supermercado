@@ -13,11 +13,11 @@ namespace Tiendita
             // Nombre - Deuda
             Clients = new Dictionary<string, int>(StringComparer.InvariantCultureIgnoreCase) // Llave por minuscula o mayuscula
             {
-                { "Juan", 0 },
+                { "Jose", 0 },
                 { "Pedro", 0 },
                 { "Ana", 0 },
                 { "Martha", 0 },
-                { "Manuela", 0 },
+                { "Isabela", 0 },
                 { "Miguel", 0 }
             };
         }
@@ -76,14 +76,14 @@ namespace Tiendita
                 { "Ambientador", 9000 },
                 { "Cerveza", 4000 },
                 { "Desodorante", 2000 },
-                {"coca cola",3000 },
-                {"aguardiente",40000 },
-                {"cigarrillo", 6000 },
-                {"arepa",1200 },
-                {"quesito",3500 },
-                {"tosatdas",3000 },
-                {"jugpo de naranja", 5000 },
-                {"canela", 500 },
+                { "coca cola",3000 },
+                { "aguardiente",40000 },
+                { "cigarrillo", 6000 },
+                { "arepa",1200 },
+                { "quesito",3500 },
+                { "tostadas",3000 },
+                { "jugo de naranja", 5000 },
+                { "canela", 500 },
             };
         }
         public int GetValueByProductName(string productName)
