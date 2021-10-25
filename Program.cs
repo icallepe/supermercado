@@ -13,11 +13,11 @@ namespace Tiendita
             // Nombre - Deuda
             Clients = new Dictionary<string, int>(StringComparer.InvariantCultureIgnoreCase) // Llave por minuscula o mayuscula
             {
-                { "Juan", 0 },
+                { "Jose", 0 },
                 { "Pedro", 0 },
                 { "Ana", 0 },
                 { "Martha", 0 },
-                { "Manuela", 0 },
+                { "Isabela", 0 },
                 { "Miguel", 0 }
             };
         }
@@ -76,21 +76,14 @@ namespace Tiendita
                 { "Ambientador", 9000 },
                 { "Cerveza", 4000 },
                 { "Desodorante", 2000 },
-                {"coca cola",3000 },
-                {"aguardiente",40000 },
-                {"cigarrillo", 6000 },
-                {"arepa",1200 },
-                {"quesito",3500 },
-                {"tosatdas",3000 },
-                {"jugpo de naranja", 5000 },
-                {"canela", 500 },
-                {"pimienta", 1000 },
-                {"chocolatina", 2800 },
-                {"mani", 3000 },
-                {"nutella",7000 },
-                {"colobiana", 2000 },
-                {"azucar", 1000 },
-                {"sal", 1000 },
+                { "coca cola",3000 },
+                { "aguardiente",40000 },
+                { "cigarrillo", 6000 },
+                { "arepa",1200 },
+                { "quesito",3500 },
+                { "tostadas",3000 },
+                { "jugo de naranja", 5000 },
+                { "canela", 500 },
             };
         }
         public int GetValueByProductName(string productName)
@@ -149,7 +142,7 @@ namespace Tiendita
 
                         if (productValue == 0)
                         {
-                            Console.WriteLine($"{productName} no existe");
+                            Console.WriteLine($"{productName} no esta disponible");
                         }
                         else
                         {
@@ -184,7 +177,7 @@ namespace Tiendita
                         break;
 
                     case "6":
-                        Console.Write("Ingrese nombre del cliente a actualizar: ");
+                        Console.Write("Ingrese el nombre de cliente a actualizar: ");
                         string currentClientName = Console.ReadLine();
                         Console.Write("Ingrese el saldo a actualizar: ");
                         string currentDebt = Console.ReadLine();
@@ -202,13 +195,20 @@ namespace Tiendita
                         break;
 
                     case "8":
-
+                        Console.WriteLine("-- Total saldo --");
+                        clientsManager.GetAllDebts();
                         break;
                     case "9":
                         flag = false;
                         break;
                     default:
-                        Console.WriteLine("El número ingresado no se encuentra dentro de las opciones");
+                        Console.WriteLine("El número que ingresa no esta dentro de las opciones correspondientes");
+                        break;
+                    case "10":
+                        Console.WriteLine("Hecho por:");
+                        Console.WriteLine("Miguel Mogollón");
+                        Console.WriteLine("Isabela Calle");
+                        Console.WriteLine("José David Serna");
                         break;
                 }
 
