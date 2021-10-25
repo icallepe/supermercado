@@ -179,8 +179,13 @@ namespace Tiendita
                         clientsManager.AddDebtByName(currentClientName, int.Parse(currentDebt), isForceUpdate);
                         break;
                     case "7":
-                        
+                        Console.WriteLine("-- Productos vendidos --");
+                        foreach (string sellRecord in sellRecords)
+                        {
+                            Console.WriteLine(sellRecord);
+                        }
                         break;
+
                     case "8":
 
                         break;
