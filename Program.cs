@@ -196,6 +196,13 @@ namespace Tiendita
                     default:
                         Console.WriteLine("El número ingresado no se encuentra dentro de las opciones");
                         break;
+
+                    case "10":
+                        Console.WriteLine("Hecho por:");
+                        Console.WriteLine("Miguel Mogollón");
+                        Console.WriteLine("Isabela Calle");
+                        Console.WriteLine("José David Serna");
+                        break;
                 }
 
                 Console.WriteLine("\nOperacion finalizada. Por favor seleccione otra opcion o termine el programa:\n");
